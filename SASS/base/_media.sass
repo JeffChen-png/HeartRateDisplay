@@ -4,7 +4,29 @@
 	.container
 		padding: 0 20px
 	.header
-		justify-content: space-around !important
+		justify-content: space-around
 
 @media (max-width: 767px)
+	.promo
+		&__header
+			font-size: 38px
+		&__subheader
+			font-size: 18px
+	.header
+		&__phone
+			font-size: 16px
+		&__official
+			font-size: 10px
 @media (max-width: 576px)
+	.header
+		flex-wrap: wrap
+		&__logo
+			margin-bottom: 10px
+	.promo
+		&__header
+			font-size: 32px
+	.privilege
+		&__items
+			flex-direction: column
+		&__item
+			max-width: 100%
