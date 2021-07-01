@@ -1,0 +1,50 @@
+.carousel
+	padding: 81px 0 
+	&__inner
+		position: relative
+		max-width: 850px
+		margin: 0 auto
+		img
+			width: 100%
+			margin: 0 auto
+
+	.slick-prev, .slick-next
+		border: none 
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		border: none
+		background-color: #fff
+		outline: none
+		img
+			max-width: 31px
+			max-height: 50px
+	.slick-prev
+		left: -10%
+	.slick-next
+		right: -10%
+	.slick-dots
+		padding-top: 40px
+		list-style: none
+		text-align: center
+		margin: 0 auto
+		outline: none 
+		li 
+			display: inline-block 
+			margin-left: 10%
+			&:first-child
+				margin-left: 0
+			button
+				font-size: 18px
+				border: 0px solid 
+				padding: 5px 10px
+				border-radius: 5px
+				transform: skew(-12deg, 0)
+				outline: none 
+				background-color: #fff
+		.slick-active
+			button 
+				background-color: $main-color
+				color: #fff
+
+
