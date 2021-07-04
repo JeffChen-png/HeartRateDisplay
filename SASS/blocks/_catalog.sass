@@ -1,0 +1,143 @@
+.catalog
+	padding: 0 0 100px 0
+	&__title
+		@include title
+	&__tabs
+		margin: 0
+		padding: 0
+		margin-top: 70px
+		list-style-type: none 
+		display: flex
+		align-items: center 
+		justify-content: center
+		gap: 10px
+
+	&__tab
+		min-height: 50px
+		max-width: 220px
+		width: 33%
+		border: 2px solid #d0d0d0
+		transform: skewX(-30deg)
+		font-size: 18px
+		font-weight: 500
+		text-transform: uppercase
+		color: #6b6b6b
+		display: flex
+		align-items: center 
+		justify-content: center
+		text-align: center
+		cursor: pointer
+		transition: 0.5s all
+		&:hover
+			box-shadow: 2px 2px 15px #000
+			border: none
+		div 
+			transform: skewX(30deg)
+		&_active
+			background-color: $main-color
+			color: #fff
+			border: none 
+	&__content
+		margin-top: 60px
+		display: none
+		gap: 10px 20px
+		flex-wrap: wrap
+		&_active
+			display: flex
+
+	&-item
+		max-width: 300px
+		min-height: 440px
+		border: 2px solid #e8e8e8
+		padding: 20px 20px 26px 20px
+		overflow: hidden
+		&__img
+			max-width: 100%
+			min-height: 200px
+			display: block 
+			margin: 0 auto 
+		&__subtitle
+			margin-top: 20px
+			font-size: 16px
+			font-weight: 700
+			color: #0d0d0d
+			text-align: center
+		&__descr
+			margin-top: 16px
+			margin-bottom: 20px
+			font-size: 14px
+			font-weight: 300
+			color: #0d0d0d
+			text-align: center
+		&__link
+			font-size: 14px
+			font-weight: 500
+			text-decoration: underline
+			color: $main-color
+			text-align: center
+			cursor: pointer 
+			text-transform: uppercase 
+		hr 
+			background-color: #e8e8e8
+			margin: 20px 0
+			height: 2px
+			opacity: 1
+		&__footer
+			display: flex
+			justify-content: space-between 
+			align-items: center 
+		&__old-price
+			font-size: 14px
+			font-weight: 300
+			color: #555555
+			text-decoration: line-through
+		&__price
+			font-size: 20px
+			font-weight: 700
+			color: #050505
+		&__wrapper
+			width: calc(200% + 40px)
+			display: flex
+		&__content
+			width: 50%
+			transform: translateX(0%)
+			transition: 0.5s all
+			&_active
+				transform: translateX(-100%)
+		&__list
+			margin: 0
+			position: relative
+			width: 50%
+			list-style: none
+			padding: 0 18px 0 22px
+			transform: translateX(0%)
+			transition: 0.5s all
+			&_active
+				transform: translateX(-100%)
+		li
+			position: relative
+			margin-bottom: 20px
+			font-size: 14px
+			font-weight: 300
+			color: #555555
+			&:before
+				content: " "
+				position: absolute
+				height: 5px
+				width: 5px
+				left: -7%
+				top: 17%
+				transform: translateX(-50%)
+				background-color: $main-color	
+		&__back
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(calc(-50% - 4px))
+			font-size: 14px
+			font-weight: 500
+			text-decoration: underline
+			color: $main-color
+			text-align: center
+			cursor: pointer 
+			text-transform: uppercase 
