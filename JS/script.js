@@ -61,5 +61,42 @@ $(document).ready(function(){
   			$('.overlay, #consultation, #order, #thanks').hide();
 		}
   	});
+
+  	//Валидация
+
+  	function validateForms(form) {
+  		$(form).validate({
+	  		rules: {
+	  			name: {
+			    	required: true,
+			    	minlength: 15,
+			    },
+	  			phone: "required",
+	  			email: {
+	  				required: true,
+	  				email: true,
+	  			},
+	  		},
+	  		messages: {
+	   			name: {
+			    	required: "Пожалуйста, введите свое имя",
+			    	minlength: jQuery.validator.format("Введите {0} символа!")
+			    },
+	   			phone: "Пожалуйста, введите свой номер телефона",
+	    		email: {
+	      			required: "Введите адресс электронной почты",
+	      			email: "Ваш почтовый адрес должен быть формата: name@domain.com",
+	    		},
+	  		},
+	  	});
+  	};
+
+  	validateForms('#consultation-form');
+  	validateForms('#order .form_main');
+  	validateForms('#consultation .form_main');
+
+  	// Маска ввода номера
+
+  	$('input[name=phone]').mask("+7-(999)-999-9999");
 });
 
