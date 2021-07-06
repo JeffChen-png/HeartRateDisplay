@@ -98,5 +98,21 @@ $(document).ready(function(){
   	// Маска ввода номера
 
   	$('input[name=phone]').mask("+7-(999)-999-9999");
+
+  	//Анимация
+  	
+
+  	$(window).on('scroll', function(){
+  		$('.reviews__item').each(function(i){
+  			($('.reviews__item').eq(i)).fadeTo(0, 0);
+	  		if (!($('.reviews__item').eq(i)).hasClass("animate__animated animate__backInLeft")){
+				var result = ($('.reviews__item').eq(i)).offset().top + ($('.reviews__item').eq(i)).height();
+				if ($(window).scrollTop() + $(window).height() > result) {
+	  				($('.reviews__item').eq(i)).fadeTo(0, 1).addClass("animate__animated animate__backInLeft");
+	  			};
+	  		};
+	  	});
+  	});
+
 });
 
