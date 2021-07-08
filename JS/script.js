@@ -107,7 +107,7 @@ $(document).ready(function(){
   			($('.reviews__item').eq(i)).fadeTo(0, 0);
 	  		if (!($('.reviews__item').eq(i)).hasClass("animate__animated animate__backInLeft")){
 				var result = ($('.reviews__item').eq(i)).offset().top + ($('.reviews__item').eq(i)).height();
-				if ($(window).scrollTop() + $(window).height() > result) {
+				if ($(window).scrollTop() + $(window).height()/2 > result) {
 	  				($('.reviews__item').eq(i)).fadeTo(0, 1).addClass("animate__animated animate__backInLeft");
 	  			};
 	  		};
